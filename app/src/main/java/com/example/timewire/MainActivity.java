@@ -10,7 +10,6 @@ public class MainActivity extends AppCompatActivity {
 
     private OpenGLView openGLView;
     protected static int[] touchPos = {0,0};
-    protected static int[] screenSize = {Resources.getSystem().getDisplayMetrics().widthPixels,Resources.getSystem().getDisplayMetrics().heightPixels};
 
 
     @Override
@@ -18,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         openGLView = findViewById(R.id.openGLView);
+
     }
 
     @Override
@@ -32,18 +32,18 @@ public class MainActivity extends AppCompatActivity {
         openGLView.onPause();
     }
 
-    @Override
+    /*@Override
     public boolean onTouchEvent(MotionEvent event) {
         touchPos[0] = (int)event.getX();
         touchPos[1] = (int)event.getY();
 
-        /*switch (event.getAction()) {
+        switch (event.getAction()) {
             case MotionEvent.ACTION_DOWN:
             case MotionEvent.ACTION_MOVE:
             case MotionEvent.ACTION_UP:
-        }*/
+        }
 
 
         return super.onTouchEvent(event);
-    }
+    }*/
 }
